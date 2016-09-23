@@ -1,6 +1,28 @@
-<div class="key"></div>
-<p class="byline brandon">Be the first to know</p>
 <%= form_for @user, :url => { :action => "create" } do |f| %>
-  <%= f.text_field :email, :placeholder => "Enter Email", :class => "email brandon" %>
-  <input class="submit brandon" name="commit" type="submit" value="Step Inside" />
+<div class="p30 p20-mobile box-shadow2 panel-bottom clearfix">
+    <div class="clear">
+        <p class="nomargin">Navn:</p>
+        <div class="col-xs-12 mobile-block-xs nopadding mt5 mb10">
+            <%= f.text_field :name, :class => "skin-input full-width-sm mobile-block" %>
+        </div>
+    </div>
+    <div class="clear">
+        <p class="nomargin">Postnummer:</p>
+        <div class="col-xs-12 mobile-block-xs nopadding mt5 mb10">
+            <%= f.text_field :postalcode, :class => "skin-input full-width-sm mobile-block" %>
+        </div>
+    </div>
+    <div class="clear">
+        <p class="nomargin">Email:</p>
+        <div class="col-xs-12 mobile-block-xs nopadding mt5 mb10">
+            <%= f.text_field :postalcode, :class => "skin-input full-width-sm mobile-block" %>
+        </div>
+    </div>
+    <div class="SpacerBox Clear none space-20">
+        <i class="spaceri"></i>
+    </div>
+    <div class="col-xs-12 text-center">
+        <%= f.submit "Submit", class: "btn btn-blue-md2 hover-applied" %>
+    </div>
+</div>
 <% end %>

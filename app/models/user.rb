@@ -9,8 +9,9 @@ class User < ActiveRecord::Base
     message: 'Invalid email format.'
   }
   validates :referral_code, uniqueness: true
+  validates :name, :postalcode, presence: true
 
-  before_create :create_referral_code
+  # before_create :create_referral_code
   after_create :send_welcome_email
 
   REFERRAL_STEPS = [
@@ -45,7 +46,6 @@ class User < ActiveRecord::Base
   ]
 
   private
-
   def create_referral_code
     self.referral_code = UsersHelper.unused_referral_code
   end

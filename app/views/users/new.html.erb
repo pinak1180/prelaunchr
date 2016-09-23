@@ -1,12 +1,22 @@
-<div class="hero">
-  <p class="large brandon">Harry&#8217;s is live</p>
-  <p class="small brandon">Respecting the Face and Wallet<br>Since Like...Right Now.</p>
-</div>
-
-<div class="form-wrap clearfix <%= "ended" if Rails.application.config.ended %>">
-  <% if Rails.application.config.ended %>
-    <%= render "users/campaign_ended" %>
-  <% else %>
-    <%= render "users/campaign_ongoing" %>
-  <% end %>
+<div class="content-wrap nopadding  nopadding-xs noshadow clearfix no-bg temp-landing-page">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="panel-wrap clearfix box-shadow2 z-index1 p30 p20-mobile">
+                <div class="panel-title nopadding ">
+                    Dentector er ved at finde de bedste tandlæger til dig. Udfyld din email adresse og få besked når vi er klar.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row nomargin">
+        <div class="col-xs-12 plr60 plr20-mobile">
+          <div class="form-wrap clearfix <%= "ended" if Rails.application.config.ended %>">
+            <% if Rails.application.config.ended %>
+              <%= render "users/campaign_ended" %>
+            <% else %>
+              <%= render "users/campaign_ongoing" %>
+            <% end %>
+          </div>
+        </div>
+    </div>
 </div>

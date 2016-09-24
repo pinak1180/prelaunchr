@@ -20,7 +20,7 @@ class UsersController < ApplicationController
       # cookies[:h_email] = { value: @user.email }
       redirect_to :back, notice: 'Thank you!'
     else
-      redirect_to root_path, alert: @user.errors.full_messages
+      redirect_to root_path, alert: 'Please fill out all values properly.'
     end
   end
 

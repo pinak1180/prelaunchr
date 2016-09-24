@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
     with: /\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/i,
     message: 'Invalid email format.'
   }
-  validates :referral_code, uniqueness: true
+  # validates :referral_code, uniqueness: true
   validates :name, :postalcode, presence: true
 
   # before_create :create_referral_code

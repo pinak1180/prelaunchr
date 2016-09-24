@@ -3,19 +3,19 @@
     <div class="clear">
         <p class="nomargin">Navn:</p>
         <div class="col-xs-12 mobile-block-xs nopadding mt5 mb10">
-            <%= f.text_field :name, :class => "skin-input full-width-sm mobile-block" %>
+            <%= f.text_field :name, :class => "skin-input full-width-sm mobile-block", required: true %>
         </div>
     </div>
     <div class="clear">
         <p class="nomargin">Postnummer:</p>
         <div class="col-xs-12 mobile-block-xs nopadding mt5 mb10">
-            <%= f.text_field :postalcode, :class => "skin-input full-width-sm mobile-block" %>
+            <%= f.text_field :postalcode, :class => "skin-input full-width-sm mobile-block", required: true %>
         </div>
     </div>
     <div class="clear">
         <p class="nomargin">Email:</p>
         <div class="col-xs-12 mobile-block-xs nopadding mt5 mb10">
-            <%= f.text_field :postalcode, :class => "skin-input full-width-sm mobile-block" %>
+            <%= f.text_field :email, :class => "skin-input full-width-sm mobile-block", required: true %>
         </div>
     </div>
     <div class="SpacerBox Clear none space-20">

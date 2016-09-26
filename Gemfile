@@ -39,6 +39,14 @@ end
 # gem 'capistrano'
 
 group :production do
-  gem 'rails_12factor'
-  gem 'rails_serve_static_assets'
+  #gem 'rails_12factor'
+  #gem 'rails_serve_static_assets'
+end
+
+group :deployment do
+  gem 'capistrano', '~> 3.4.0'
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano-rails', require: false
+  gem 'capistrano-rvm', '~> 0.1.0', require: false
+  gem 'san_juan'
 end
